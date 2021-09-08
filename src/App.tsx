@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ReactElement } from 'react';
+import './styles/App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Coins from './pages/coin';
+import Dashboard from './pages/dashboard';
+import { Provider } from 'react-redux';
+import combinedReducers from './store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(): ReactElement{
+
+return (
+  <div className="App" >
+  <Provider store={combinedReducers}>
+  <Router>
+     <Switch>
+       
+       <Route path="/coin/:id">
+         <Coins />
+       </Route>
+       <Route path="/">
+         <Dashboard />
+       </Route>
+     </Switch>
+    </Router>
+
+  </Provider>
+   
+    
+  </div>
+);
 }
 
 export default App;

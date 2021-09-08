@@ -1,0 +1,50 @@
+.all-coins{
+    background-color: #241f2a;
+    margin-top: 10px;
+    width: 99%;
+    border-radius: 5px;
+    padding:8px 15px;
+
+    .coin-container{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin: 5px;
+      width: 100%;
+
+    }
+    h3{
+      color: white;
+    }
+
+    .coin{
+      background-color: #17151d;
+      padding: 10px;
+      border-radius: 5px;
+      height: 150px;
+      width: 20%;
+      cursor: pointer;
+      margin: 5px 1% ;
+      text-align: center;
+      border: 2px solid #17151d;
+      transition: border 0.4s;
+    
+      .price{
+        font-size: 12px;
+        display: block;
+        color: white;
+       }
+      .high_low{
+        font-size: 10px;
+        background-color: #241f2a;
+        padding: 5px;
+        border-radius: 10px;
+      }
+    }
+
+    .coin:hover{
+      border: 2px solid white;
+    
+    
+    }
+  }
