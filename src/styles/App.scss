@@ -80,6 +80,75 @@ nav.nav {
     }
 }
 
+nav.nav {
+    ul {
+        list-style-type: none;
+        display: inline;
+        padding: 0;
+        li {
+            color: white;
+            max-height: 20px;
+            border-radius: 5px;
+            margin: 5px auto;
+            cursor: pointer;
+            background-color: #17151d;
+        }
+        span.togglemenu {
+            visibility: hidden;
+        }
+        li:hover {
+            background-color: #3f6eff;
+        }
+    }
+}
+
+nav.mobile-nav {
+    display: none;
+    flex: 0;
+    height: 100%;
+    position: sticky;
+    background-color: yellow;
+    top: 1em;
+    z-index: 99;
+    .container {
+        position: relative;
+        margin: 10px 0px;
+        background-color: #241f2a;
+        width: 50px;
+        padding: 5px;
+        height: 100%;
+        transition: width 0.2s;
+        border-radius: 10px;
+    }
+    .menu-text {
+        visibility: hidden;
+        font-size: 14px;
+        margin-left: 10px;
+        vertical-align: top;
+        white-space: nowrap;
+        position: absolute;
+    }
+    .increase {
+        width: 200px;
+        .menu-text {
+            transition: visibility 0.01s;
+            font-size: 14px;
+            margin-left: 10px;
+            vertical-align: top;
+            visibility: visible;
+        }
+    }
+    .toggle {
+        background-color: #241f2a;
+        width: 60px;
+        height: 50px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
 .main-content {
     flex: 10;
     justify-content: space-between;
@@ -153,6 +222,12 @@ nav.nav {
 }
 
 @media screen and (max-width: 700px) {
+    // .App {
+    //     padding: 0px;
+    // }
+    nav.mobile-nav {
+        display: block;
+    }
     .App>.body {
         flex-direction: column;
     }

@@ -37,12 +37,12 @@ function Info(props: any): ReactElement {
                         <div style={{ maxWidth: '100%' }}>
                             <p className='description-html'>
                                 {/**TODO: Convert To HTML Safely */}
-                                {data.description['en'].substring(0, 250)}...
+                                {data.description['en'].substring(0, 150)}...
                             </p>
                             <br></br>
 
                             <span className='description'>Facts</span>
-                            <DataList data={parseHistoryData(data)} maps={data1} />
+                               <DataList data={parseHistoryData(data)} maps={data1} />
 
                             <br></br>
 

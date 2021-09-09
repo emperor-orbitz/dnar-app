@@ -15,7 +15,6 @@ function SideNav(props: any): ReactElement {
 
     return (
 
-
         <nav className="nav">
             <div>
                 <div className="toggle" onClick={ontoggle}>
