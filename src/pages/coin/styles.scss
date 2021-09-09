@@ -55,11 +55,16 @@
 .big-chart {
     box-sizing: border-box;
     margin-top: 20px;
+    position: relative;
     padding: 20px;
     width: 100%;
     background: #241f2a;
-    height: 250px;
+    min-height: 150px;
+    color: white;
+    // padding: 20px;
 }
+
+.big-maxi-plots {}
 
 @media screen and (max-width: 700px) {
     .info-box {

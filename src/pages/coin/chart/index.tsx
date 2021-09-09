@@ -38,44 +38,27 @@ var config:any = {
         config: {
             displayModeBar: false,
             showAxisDragHandles: false,
-            displaylogo: false,
-            responsive:true,
-
+            displaylogo: false
     
         },
-        layout:{
-                    hovermode: true,
-                    autosize:true,
-                    xaxis: {
-                        showgrid: false,
-                        color: 'white',
-                        anchor:'x'
-                    },
-                    yaxis: {
-                        showgrid: false,
-                        color: 'white',
-                        anchor:'y'
-                    },
-                    // width: "100%", height: "100%", 
-                    margin: {
-                        l: 50,
-                        r: 10,
-                        // b: 30,
-                        t: 30,
-                        pad: 10
-                    },
-                     font: { size: 10 },
-                        height:"80%",
-                     showlegend: false,  paper_bgcolor: 'rgba(0,0,0,0)',
-                    plot_bgcolor: 'rgba(0,0,0,0)',
-            //         			xaxis: {
-			// 	domain: [1, 1],
-			// 	anchor: "y2",
-			// },
-			// yaxis: {
-			// 	domain: [0.1, 1],
-			// 	anchor: "x",
-			// },
+        layout: {
+			// autosize: true,
+			margin: {
+				l: 10,
+				r: 10,
+				t: 35,
+				pad: 3,
+			},
+            font: { size: 5 },
+			showlegend: false,
+			xaxis: {
+				domain: [1, 1],
+				anchor: "y2",
+			},
+			yaxis: {
+				domain: [0.1, 1],
+				anchor: "x",
+			},
 			yaxis2: {
 				showticklabels: false,
 				domain: [0, 0.1],
@@ -84,34 +67,7 @@ var config:any = {
 			grid: {
 				roworder: "bottom to top",
 			},
-                }
-        // layout: {
-		// 	autosize: true,
-		// 	height: "100%",
-		// 	margin: {
-		// 		l: 50,
-		// 		r: 20,
-		// 		t: 35,
-		// 		pad: 3,
-		// 	},
-		// 	showlegend: false,
-		// 	xaxis: {
-		// 		domain: [1, 1],
-		// 		anchor: "y2",
-		// 	},
-		// 	yaxis: {
-		// 		domain: [0.1, 1],
-		// 		anchor: "x",
-		// 	},
-		// 	yaxis2: {
-		// 		showticklabels: false,
-		// 		domain: [0, 0.1],
-		// 		anchor: "x",
-		// 	},
-		// 	grid: {
-		// 		roworder: "bottom to top",
-		// 	},
-		// }
+		}
     }
 
 
@@ -130,7 +86,7 @@ function Chart(props: any): ReactElement {
 
 	const fetchData = async () => {
 		let data:{index:Array<any>, price:Array<any>, volumes:Array<any>} = { index: [], price: [], volumes: [] };
-		let result:any = await axios.get("https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=50&interval=1d");
+		let result:any = await axios.get("https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=30&interval=1m");
         console.log(result, 'Result.price sis iterable oo')
 		for (var item of result.data.prices) {
 			data.index.push(item[0]);
@@ -202,11 +158,9 @@ function Chart(props: any): ReactElement {
                 <div className='big-chart'>
                  {console.log(data, 'latestPrice')}
                     {Object.keys(data).length > 0? 
-                    <>
-                    <h3>Current Price: ${latestPrice}</h3>
-                    <Plot
-                            // className='big-maxi-plots'
-                            // useResizeHandler={true}
+                          <Plot
+                            className='big-maxi-plots'
+                          
                             config={config.config}
                             data={[
                               {
@@ -215,14 +169,12 @@ function Chart(props: any): ReactElement {
                                 type: "scatter",
                               
                                 mode: "lines",
-                                marker: { color: '#3f6eff' }
+                                marker: { color: 'green' }
                               }
                             ]}
-                            style={{height:'80%', width:'95%', fontSize:'12px'}}
+                  
                             layout={config.layout}
                           />
-                    </>
-                        
                 
                 
                     :
