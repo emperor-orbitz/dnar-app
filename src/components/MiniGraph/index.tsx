@@ -21,6 +21,7 @@ function MiniGraph({id, price_change}:MiniGraphI):ReactElement {
 
         :
              <Plot
+             className='small-mini-plots'
                config={config.config}
              data={[
                {
