@@ -18,12 +18,13 @@ function SideNav(props: any): ReactElement {
 
 
         <nav className="nav">
+           <div style={{ }}>
             <div className="toggle" onClick={ontoggle}>
                 <AiOutlineMenu style={{ color: '#3f6eff', width: '20px', height: '20px' }} />
             </div>
             <div className="container" ref={toggleRef}>
                 <ul>
-                    <li style={{ padding: '15px' }}>
+                    <li style={{ padding: '15px', }}>
                     <Link to='/'>
                         <AiFillLayout size={18} style={{ color: 'white' }} />
                         <span className='menu-text'>My Dashboard</span>
@@ -42,7 +43,7 @@ function SideNav(props: any): ReactElement {
                 </ul>
 
             </div>
-
+</div>
         </nav>
 
 

@@ -11,6 +11,7 @@ function Events(): ReactElement {
 
         <aside className="right">
             <div className='news-container'>
+                <h3>Events</h3>
                 {
                     events.length === 0 ?
                         <Loader w={100} h={100} />

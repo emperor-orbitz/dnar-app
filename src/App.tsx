@@ -10,28 +10,27 @@ import Dashboard from './pages/dashboard';
 import { Provider } from 'react-redux';
 import combinedReducers from './store';
 
-function App(): ReactElement{
+function App(): ReactElement {
 
-return (
-  <div className="App" >
-  <Provider store={combinedReducers}>
-  <Router>
-     <Switch>
-       
-       <Route path="/coin/:id">
-         <Coins />
-       </Route>
-       <Route path="/">
-         <Dashboard />
-       </Route>
-     </Switch>
-    </Router>
+  return (
+    <div className="App" >
+      <Provider store={combinedReducers}>
+        <Router>
+          <Switch>
+            <Route path="/coin/:id">
+              <Coins />
+            </Route>
+            <Route path="/">
+              <Dashboard />
+            </Route>
+          </Switch>
+        </Router>
 
-  </Provider>
-   
-    
-  </div>
-);
+      </Provider>
+
+
+    </div>
+  );
 }
 
 export default App;

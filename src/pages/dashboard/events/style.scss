@@ -1,10 +1,9 @@
-.event-card{
-
-background-size: cover;
-position: relative;
-background-repeat: no-repeat;
-margin: 10px 0px; 
-border-radius: 5px; 
-height: 200px;
-
+.event-card {
+    cursor: pointer;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 10px 0px;
+    border-radius: 5px;
+    height: 200px;
 }

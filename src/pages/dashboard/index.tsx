@@ -16,9 +16,12 @@ function Dashboard(props:any): ReactElement {
             <SideNav />
 
             <section className="main-content">
+                <div style={{width:'100%', position:'relative', boxSizing:'border-box'}}>
                 <Search />
                 <Leader />
                 <Coins />
+                </div>
+             
             </section>
 
             <Events />
