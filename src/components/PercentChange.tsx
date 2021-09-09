@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import './styles.scss';
 
 interface PriceColorI{
     currency:string,
@@ -8,7 +9,7 @@ function PercentChange({currency,price}:PriceColorI):ReactElement {
   return(
   <>
         {
-            price < 0 ? <span style={{color:'red'}}>{price}%</span> : <span style={{color:'green'}}>{price}%</span>
+            price < 0 ? <span className='red'>{price}%</span> : <span className='green'>{price}%</span>
         }
   </>); 
 }

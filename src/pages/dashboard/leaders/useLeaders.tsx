@@ -19,7 +19,7 @@ function useLeaders(store:any): Array<any> {
 
     useEffect(() => {
         if (store.length === 0) fetchLeaders();
-    }, []);
+    });
 
     return [store];
 }

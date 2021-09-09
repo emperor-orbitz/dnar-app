@@ -1,4 +1,4 @@
-import React, {ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import './style.scss';
 
 import Leader from './leaders';
@@ -7,8 +7,8 @@ import Coins from './coins';
 import Events from './events';
 import Search from './Search';
 
-function Dashboard(props:any): ReactElement {
-    
+function Dashboard(props: any): ReactElement {
+
 
     return (
         <div className='body'>
@@ -16,12 +16,12 @@ function Dashboard(props:any): ReactElement {
             <SideNav />
 
             <section className="main-content">
-                <div style={{width:'100%', position:'relative', boxSizing:'border-box'}}>
-                <Search />
-                <Leader />
-                <Coins />
+                <div style={{ width: '100%', position: 'relative', boxSizing: 'border-box' }}>
+                    <Search />
+                    <Leader />
+                    <Coins />
                 </div>
-             
+
             </section>
 
             <Events />

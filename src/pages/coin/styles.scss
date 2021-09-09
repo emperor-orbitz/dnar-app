@@ -1,0 +1,68 @@
+.info-box {
+    position: sticky;
+    top: 2em;
+    margin: 0px 5px;
+    background-color: #241f2a;
+    width: 100%;
+    padding: 2em 15px;
+    max-height: 80%;
+    transition: width 0.2s;
+    border-radius: 10px;
+    box-sizing: border-box;
+    img {
+        height: 50px;
+        width: 50px;
+        right: 0;
+        top: -25px;
+        position: absolute;
+    }
+    .description {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .numbers-box {
+        box-sizing: border-box;
+        background: #17151d;
+        width: 100%;
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+    p.description-html {
+        font-size: 14px;
+        word-wrap: break-word;
+        line-height: 18px;
+        text-overflow: ellipsis;
+    }
+    .description-item {
+        width: 100%;
+        padding: 10px 2px;
+        .key {
+            display: block;
+            font-size: 12px;
+            float: left;
+            font-weight: bold;
+        }
+        .value {
+            font-size: 12px;
+            float: right;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+        }
+    }
+}
+
+.big-chart {
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    background: #241f2a;
+    height: 250px;
+}
+
+@media screen and (max-width: 700px) {
+    .info-box {
+        margin: 20px 0px;
+    }
+}

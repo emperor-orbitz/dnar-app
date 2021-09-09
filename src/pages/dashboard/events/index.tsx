@@ -11,7 +11,8 @@ function Events(): ReactElement {
 
         <aside className="right">
             <div className='news-container'>
-                <h3>Events</h3>
+                <p style={{ fontSize: '20px' }}>Events <br /> <span style={{ fontSize: '10px' }}>Explore Upcoming Events in your area. </span></p>
+
                 {
                     events.length === 0 ?
                         <Loader w={100} h={100} />

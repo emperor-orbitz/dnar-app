@@ -1,10 +1,5 @@
 import axios from 'axios';
-import  {ReactElement, useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { useLocation, useParams } from 'react-router';
-import SideNav from '../../components/SideNav';
-import '../../styles/App.scss';
-import Search from '../dashboard/Search';
+import  { useEffect, useState } from 'react';
 
 
 function useInfo(id:string): Array<any> {
@@ -20,7 +15,7 @@ function useInfo(id:string): Array<any> {
 
     useEffect(()=>{
         fetchCoin()
-    }, []);
+    });
 
  return [data];
 }
