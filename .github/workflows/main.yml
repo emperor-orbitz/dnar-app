@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: CI='' npm run build # The build command of your project
     
-      - name: Add Static.json
+      - name: Add Static-json
       - run: |
           cd build && touch static.json
           echo '{"root": "/"}' >> static.json
