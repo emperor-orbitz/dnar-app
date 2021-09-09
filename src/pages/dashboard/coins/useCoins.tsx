@@ -17,7 +17,7 @@ function useCoins(store?: any, dispatch?: any): Array<any> {
 
     useEffect(() => {
         if (store.length === 0) fetchCoins();
-    });
+    },[]);
 
     return [store];
 }

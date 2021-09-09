@@ -36,10 +36,10 @@ function Chart(props: any): ReactElement {
 	const [latestPrice, setLatestPrice] = useState<any>(0);
 
 	useEffect(() => {
-		fetchData().then((chartData:any) => {
-			initChart(chartData);
-			setLatestPrice(parseFloat(chartData.price[chartData.price.length - 1]).toFixed(2));
-		});
+		// fetchData().then((chartData:any) => {
+		// 	initChart(chartData);
+		// 	setLatestPrice(parseFloat(chartData.price[chartData.price.length - 1]).toFixed(2));
+		// });
 	}, []);
 
 	const fetchData = async () => {

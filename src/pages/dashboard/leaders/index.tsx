@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import '../../../styles/App.scss';
 
 import Leader from './Leader';
-// import useLeaders from './useLeaders';
+import useLeaders from './useLeaders';
 import Loader from '../../../components/Loader';
 
 function Leaders(props: any): ReactElement {
-  // const [leaders] = useLeaders(props.leaders);
+  const [leaders] = useLeaders(props.leaders);
 
   return (
 

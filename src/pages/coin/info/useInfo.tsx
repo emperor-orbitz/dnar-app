@@ -15,7 +15,7 @@ function useInfo(id:string): Array<any> {
 
     useEffect(()=>{
         fetchCoin()
-    });
+    },[]);
 
  return [data];
 }

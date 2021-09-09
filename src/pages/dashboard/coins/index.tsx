@@ -1,13 +1,13 @@
 import { ReactElement } from "react";
 import './style.scss';
 import Coin from './Coin';
-// import useCoins from "./useCoins";
+import useCoins from "./useCoins";
 import { CoinI } from "../../../store/types";
 import { connect } from "react-redux";
 import Loader from "../../../components/Loader";
 
 function AllCoin(props: any): ReactElement {
-    // const [data] = useCoins(props.coins);
+    const [data] = useCoins(props.coins);
 // 
     return (
         <div className='all-coins'>
