@@ -21,7 +21,7 @@ jobs:
           CI='' npm run build
           cd build && touch static.json
           echo '{"root": "build/"}' >> static.json
-          mv /build /dist/
+          mkdir dist && mv /build /dist/
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
