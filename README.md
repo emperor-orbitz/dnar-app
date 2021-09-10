@@ -1,6 +1,6 @@
 # How to Use
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a UI implementation of a Crypto Dashboard. The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
