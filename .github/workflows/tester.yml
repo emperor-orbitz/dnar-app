@@ -6,4 +6,10 @@ jobs:
       steps:
         - name: 'Echo Something'
           run: echo 'I AM A GOOD BOY'
+  Second-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'One wto'
+        run: ' echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"'
+      
           
