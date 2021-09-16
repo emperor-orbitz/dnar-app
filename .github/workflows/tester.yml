@@ -1,1 +1,9 @@
-
+name: 'Testing GH Actions'
+on: [push]
+jobs:
+  New-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: 'Echo Something'
+          run: echo 'I AM A GOOD BOY'
+          
