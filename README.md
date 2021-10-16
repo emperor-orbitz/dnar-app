@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/34324637/137581729-a0251ea9-04be-4898-aeb5-aba6cc8d9330.png)
+
 # How to Use
 
 This is a UI implementation of a Crypto Dashboard. The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
